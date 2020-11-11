@@ -57,7 +57,7 @@ const authProvider = FirebaseAuthProvider(config);
 
 function App() {
   return (
-    <Admin authProvider={authProvider} dashboard={Dashboard} title="ePharmacy Delivery System - Admin Panel" dataProvider={restProvider('http://epharmacy-online.herokuapp.com/api')}>
+    <Admin authProvider={authProvider} dashboard={Dashboard} title="ePharmacy Delivery System - Admin Panel" dataProvider={restProvider('https://epharmacy-online.herokuapp.com/api')}>
     <Resource name="Products" icon={ProductIcon} list={CatalogueProductList} create={ProductCreate} edit={ProductEdit}/>
     <Resource name="Categories" icon={CategoryIcon} list={CategoryList} create={CategoryCreate} edit={CategoryEdit}/>
     <Resource name="Drivers" icon={DriverIcon} list={DriverList} create={DriverCreate} edit={DriverEdit}/>
