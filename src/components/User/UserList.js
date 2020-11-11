@@ -20,8 +20,8 @@ const UserList = (props) => {
         <NumberField source="phone" />
         <TextField source="Address" />
         <ImageField label="Profile Picture" source="image" />
-        <EditButton basePath="/users" />
-        <DeleteButton basePath="/users" />
+        <EditButton basePath="/profile" />
+        <DeleteButton basePath="/profile" />
       </Datagrid>
     </List>
   );
