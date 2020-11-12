@@ -14,8 +14,8 @@ const CategoryList = (props) => {
       <Datagrid>
         <TextField source="name" />
         <ImageField source="price" />
-        <EditButton basePath="/categories" />
-        <DeleteButton basePath="/categories" />
+        <EditButton basePath="/product-category" />
+        <DeleteButton basePath="/product-category" />
       </Datagrid>
     </List>
   );
