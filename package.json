@@ -1,10 +1,11 @@
 {
-  "homepage": "http://amahlathini.github.io/admin-dashboard",
+  "homepage": "https://amahlathini.github.io/admin-dashboard",
   "name": "admin-dashboard",
-  "proxy": "http://epharmacy-online.herokuapp.com",
+  "proxy": "https://epharmacy-online.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fusionworks/ra-google-maps-input": "^0.1.7",
     "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

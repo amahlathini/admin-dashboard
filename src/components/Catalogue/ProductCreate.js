@@ -12,8 +12,8 @@ const ProductCreate = (props) => {
                 <ImageInput source="image_url"/>
                 <BooleanInput valueLabelTrue="Active" valueLabelFalse="InActive" source="active"/>
                 <NumberInput source="unit_in_stock"/>
-                <DateInput source="date_created"/>
-                <DateInput source="last_updated"/>
+                {/* <DateInput source="date_created"/>
+                <DateInput source="last_updated"/> */}
                 <TextInput source="category_id"/>
         </SimpleForm>
         </Create>

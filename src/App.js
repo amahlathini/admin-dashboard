@@ -64,11 +64,12 @@ const fetchJson = (url, options = {}) => {
     return fetchUtils.fetchJson(url, options);
 }
 
+
 function App() {
   return (
-    <Admin authProvider={authProvider} dashboard={Dashboard} title="ePharmacy Delivery System - Admin Panel" dataProvider={jsonHalRestProvider("http://epharmacy-online.herokuapp.com/api", fetchJson)}>
+    <Admin authProvider={authProvider} dashboard={Dashboard} title="ePharmacy Delivery System - Admin Panel" dataProvider={jsonHalRestProvider("https://epharmacy-online.herokuapp.com/api", fetchJson)}>
     <Resource name="products" icon={ProductIcon} list={CatalogueProductList} create={ProductCreate} edit={ProductEdit}/>
-    <Resource name="Categories" icon={CategoryIcon} list={CategoryList} create={CategoryCreate} edit={CategoryEdit}/>
+    <Resource name="categories" icon={CategoryIcon} list={CategoryList} create={CategoryCreate} edit={CategoryEdit}/>
     <Resource name="Drivers" icon={DriverIcon} list={DriverList} create={DriverCreate} edit={DriverEdit}/>
     <Resource name="Orders" icon={OrderIcon} list={OrderList} create={OrderCreate} edit={OrderEdit}/>
     <Resource name="Transactions" icon={PaymentIcon} list={PaymentList} edit={PaymentEdit}/>
