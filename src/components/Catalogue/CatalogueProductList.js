@@ -9,14 +9,14 @@ const CatalogueProductList = (props) => {
                 <TextField source="id"/>
                 <TextField label="SKU" source="sku"/>
                 <TextField source="name"/>
-                <TextField body source="description"/>
+                {/* <TextField body source="description"/> */}
                 <NumberField label="Price" source="unit_price"/>
                 <ImageField label="Image" source="image_url"/>
                 <BooleanField valueLabelTrue="Active" valueLabelFalse="InActive" source="active"/>
                 <NumberField label="Stock" source="unit_in_stock"/>
                 <TextField source="category_id"/>
-                <EditButton basePath='/products'/>
-                <DeleteButton basePath='/products'/>
+                <EditButton basePath='/product'/>
+                <DeleteButton basePath='/product'/>
             </Datagrid>
         </List>
     )

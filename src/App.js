@@ -1,6 +1,5 @@
 import { React } from "react";
-import { Admin, Resource } from "react-admin";
-import restProvider from "ra-data-simple-rest";
+import { Admin, Resource, fetchUtils } from "react-admin";
 
 import ProductIcon from '@material-ui/icons/ShoppingCart';
 import CategoryIcon from '@material-ui/icons/Category';
@@ -13,6 +12,8 @@ import {
   FirebaseAuthProvider
 } from 'react-admin-firebase';
 
+
+import jsonHalRestProvider from 'ra-data-json-hal';
 
 import CatalogueProductList from "./components/Catalogue/CatalogueProductList";
 import ProductCreate from "./components/Catalogue/ProductCreate"
@@ -55,10 +56,18 @@ const config = {
 
 const authProvider = FirebaseAuthProvider(config);
 
+const fetchJson = (url, options = {}) => {
+    if (!options.headers) {
+        options.headers = new Headers({ Accept: 'application/json' });
+    }
+    options.headers.set('Content-Type', 'application/json');
+    return fetchUtils.fetchJson(url, options);
+}
+
 function App() {
   return (
-    <Admin authProvider={authProvider} dashboard={Dashboard} title="ePharmacy Delivery System - Admin Panel" dataProvider={restProvider('https://epharmacy-online.herokuapp.com/api')}>
-    <Resource name="Products" icon={ProductIcon} list={CatalogueProductList} create={ProductCreate} edit={ProductEdit}/>
+    <Admin authProvider={authProvider} dashboard={Dashboard} title="ePharmacy Delivery System - Admin Panel" dataProvider={jsonHalRestProvider("http://epharmacy-online.herokuapp.com/api", fetchJson)}>
+    <Resource name="products" icon={ProductIcon} list={CatalogueProductList} create={ProductCreate} edit={ProductEdit}/>
     <Resource name="Categories" icon={CategoryIcon} list={CategoryList} create={CategoryCreate} edit={CategoryEdit}/>
     <Resource name="Drivers" icon={DriverIcon} list={DriverList} create={DriverCreate} edit={DriverEdit}/>
     <Resource name="Orders" icon={OrderIcon} list={OrderList} create={OrderCreate} edit={OrderEdit}/>
