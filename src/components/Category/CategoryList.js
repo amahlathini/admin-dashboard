@@ -12,8 +12,8 @@ const CategoryList = (props) => {
   return (
     <List {...props}>
       <Datagrid>
-        <TextField source="name" />
-        <ImageField source="price" />
+        <TextField label="Name" source="categoryName" />
+        <ImageField source="image" />
         <EditButton basePath="/product-category" />
         <DeleteButton basePath="/product-category" />
       </Datagrid>
