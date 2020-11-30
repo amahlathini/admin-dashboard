@@ -1,17 +1,16 @@
 import React from 'react'
-import { Create, SimpleForm, NumberInput, TextInput, ImageInput } from "react-admin";
+import { Create, SimpleForm, NumberInput, TextInput } from "react-admin";
 
 const PharmacyCreate = (props) => {
     return (
         <Create title='Add Pharmacy' {...props}>
         <SimpleForm>
-            <TextInput source="name"/>
-            <TextInput body source="email_address"/>
-            <NumberInput source="phone"/>
-            <TextInput source="Address" />
-            <NumberInput source="location.latitude"/>
-            <NumberInput source="location.longitude"/>
-            <ImageInput label='Profile Picture' source="image" />
+            <TextInput source="pharmacy_name"/>
+            <TextInput  source="pharmacy_id"/>
+            <NumberInput source="account_number"/>
+            <TextInput source="bank_name" />
+            <NumberInput source="beneficiary_reference"/>
+            <NumberInput source="branch_code"/>
         </SimpleForm>
         </Create>
     )

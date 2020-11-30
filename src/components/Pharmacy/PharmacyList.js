@@ -5,21 +5,19 @@ import {
   TextField,
   EditButton,
   NumberField,
-  DeleteButton,
-  ImageField,
-  EmailField,
+  DeleteButton
 } from "react-admin";
 
 const PharmacyList = (props) => {
   return (
     <List {...props}>
       <Datagrid>
-        <TextField source="name" />
-        <TextField source="surname" />
-        <EmailField body source="email_address" />
-        <NumberField source="phone" />
-        <TextField source="Address" />
-        <ImageField label="Profile Picture" source="image" />
+      <TextField source="pharmacy_name"/>
+            <TextField  source="pharmacy_id"/>
+            <NumberField source="account_number"/>
+            <TextField source="bank_name" />
+            <NumberField source="beneficiary_reference"/>
+            <NumberField source="branch_code"/>
         <EditButton basePath="/pharmacies" />
         <DeleteButton basePath="/pharmacies" />
       </Datagrid>

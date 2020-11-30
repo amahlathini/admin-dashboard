@@ -5,12 +5,12 @@ const OrderCreate = (props) => {
     return (
         <Create title='Add Order' {...props}>
         <SimpleForm>
-            <TextInput source="user_id"/>
-            <TextInput source="total"/>
-            <TextInput source="status"/>
-            <NumberInput source="count" />
+        <TextInput source="order_number"/>
+            <TextInput source="payment_type"/>
+            <NumberInput source="order_total" />
+            <TextInput source="order_status"/>
+            <NumberInput source="total_catalogue_items"/>
             <DateInput source="date"/>
-            <TextInput label='Image URL' source="image" />
         </SimpleForm>
         </Create>
     )

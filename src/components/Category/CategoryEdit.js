@@ -5,8 +5,8 @@ const CategoryEdit = (props) => {
     return (
         <Edit title='Edit Category' {...props}>
         <SimpleForm>
-            <TextInput label="Category Name" source="name"/>
-            <ImageInput source="image" />
+             <TextInput label="Category Name" source="category_name"/>
+            <ImageInput source="category_image" />
         </SimpleForm>
         </Edit>
     )

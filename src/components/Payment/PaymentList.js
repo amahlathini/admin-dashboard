@@ -5,13 +5,14 @@ const PaymentList = (props) => {
     return (
         <List {...props}>
             <Datagrid>
-                <TextField source="id"/>
-                <TextField label="Order" source="order_id"/>
-                <TextField source="status"/>
-                <TextField source="type"/>
-                <TextField source="notification"/>
-                <NumberField source="total"/>
-                <DateField source="date"/>
+            <TextField disable source="receipt_number" />
+        <TextField source="date" />
+        <TextField source="type_of_payment" />
+        <TextField source="pharmacy_pharmacy_id" />
+        <TextField source="user_user_id" />
+        <NumberField disable source="payment_status" />
+        <NumberField disable source="payment_total" />
+        <DateField source="date" />
                 <EditButton basePath='/payments'/>
                 <DeleteButton basePath='/payments'/>
             </Datagrid>

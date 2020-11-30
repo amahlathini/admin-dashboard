@@ -12,10 +12,10 @@ const CategoryList = (props) => {
   return (
     <List {...props}>
       <Datagrid>
-        <TextField label="Name" source="categoryName" />
-        <ImageField source="image" />
-        <EditButton basePath="/product-category" />
-        <DeleteButton basePath="/product-category" />
+      <TextField label="Category Name" source="category_name"/>
+            <ImageField source="category_image" />
+        <EditButton basePath="/categories" />
+        <DeleteButton basePath="/categories" />
       </Datagrid>
     </List>
   );

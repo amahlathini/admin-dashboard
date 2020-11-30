@@ -2,7 +2,6 @@ import React from "react";
 import {
   Datagrid,
   TextField,
-  EmailField,
   NumberField,
   EditButton,
   List,
@@ -13,14 +12,14 @@ const DriverList = (props) => {
   return (
     <List  {...props}>
       <Datagrid>
-        <TextField source="name" />
-        <TextField source="surname" />
-        <EmailField body source="email_address" />
-        <NumberField source="phone" />
-        <TextField source="Address" />
-        <NumberField source="location.latitude" />
-        <NumberField source="location.longitude" />
-        <TextField label="Profile Picture" source="image" />
+      <TextField source="driver_name"/>
+            <TextField source="driver_surname"/>
+            <TextField body source="car_colour"/>
+            <TextField source="car_registration" />
+            <TextField label='Car Name' source="car_name" />
+            <TextField label='Model' source="car_model" />
+            <NumberField source="latitude"/>
+            <NumberField source="longitude"/>
         <EditButton basePath="/drivers" />
         <DeleteButton basePath="/drivers" />
       </Datagrid>

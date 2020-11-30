@@ -4,7 +4,6 @@ import {
   Datagrid,
   TextField,
   EditButton,
-  ImageField,
   EmailField,
   NumberField,
   DeleteButton,
@@ -14,14 +13,13 @@ const UserList = (props) => {
   return (
     <List {...props}>
       <Datagrid>
-        <TextField source="name" />
-        <TextField source="surname" />
-        <EmailField body source="email_address" />
-        <NumberField source="phone" />
-        <TextField source="Address" />
-        <ImageField label="Profile Picture" source="image" />
-        <EditButton basePath="/profile" />
-        <DeleteButton basePath="/profile" />
+      <TextField source="user_name"/>
+            <TextField source="user_surname"/>
+            <EmailField body source="email"/>
+            <NumberField source="primary_number"/>
+            <TextField source="area_name" />
+        <EditButton basePath="/users" />
+        <DeleteButton basePath="/users" />
       </Datagrid>
     </List>
   );

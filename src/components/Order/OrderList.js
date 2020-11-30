@@ -13,11 +13,12 @@ const OrderList = (props) => {
   return (
     <List {...props}>
       <Datagrid>
-        <TextField source="user_id" />
-        <TextField source="total" />
-        <TextField source="status" />
-        <NumberField source="count" />
-        <DateField source="date" />
+      <TextField source="order_number"/>
+            <TextField source="payment_type"/>
+            <NumberField source="order_total" />
+            <TextField source="order_status"/>
+            <NumberField source="total_catalogue_items"/>
+            <DateField source="date"/>
         <EditButton basePath="/orders" />
         <DeleteButton basePath="/orders" />
       </Datagrid>

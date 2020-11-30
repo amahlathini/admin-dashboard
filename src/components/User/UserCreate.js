@@ -1,16 +1,15 @@
 import React from 'react'
-import { Create, SimpleForm, NumberInput,ImageInput, TextInput } from "react-admin";
+import { Create, SimpleForm, NumberInput, TextInput } from "react-admin";
 
 const ProductCreate = (props) => {
     return (
         <Create title='Add Product' {...props}>
         <SimpleForm>
-            <TextInput source="name"/>
-            <TextInput source="surname"/>
-            <TextInput body source="email_address"/>
-            <NumberInput source="phone"/>
-            <TextInput source="Address" />
-            <ImageInput label='Profile Picture' source="image" />
+            <TextInput source="user_name"/>
+            <TextInput source="user_surname"/>
+            <TextInput body source="email"/>
+            <NumberInput source="primary_number"/>
+            <TextInput source="area_name" />
         </SimpleForm>
         </Create>
     )

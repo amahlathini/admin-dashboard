@@ -1,5 +1,5 @@
 import React from 'react'
-import { List, Datagrid, useTranslate, Filter, FilterLiveSearch, SearchInput, TextField, EditButton, NumberField, DeleteButton, ImageField, BooleanField } from "react-admin";
+import { List, Datagrid, useTranslate, Filter, FilterLiveSearch, TextField, EditButton, NumberField, DeleteButton, ImageField, BooleanField } from "react-admin";
 import { makeStyles, Chip } from '@material-ui/core';
 
 const useQuickFilterStyles = makeStyles(theme => ({
@@ -17,10 +17,6 @@ const QuickFilter = ({ label }) => {
 const ItemFilter = (props) => (
     <Filter {...props}>
         <FilterLiveSearch source="name" />
-        <SearchInput source="sku" alwaysOn />
-        <QuickFilter source="active" label="Active" defaultValue={true} />
-        <QuickFilter source="unit_in_stock" label="Stock" defaultValue={150} />
-        <QuickFilter source="price" label="Price" defaultValue={[3]} />
     </Filter>
 );
 
@@ -32,16 +28,15 @@ const CatalogueProductList = (props) => {
             <Datagrid>
                 
                 <TextField source="id"/>
-                <TextField label="SKU" source="sku"/>
-                <TextField source="name"/>
-                {/* <TextField body source="description"/> */}
-                <NumberField label="Price" source="unit_price"/>
+                <TextField source="item_name"/>
+                <TextField body source="item_description"/> 
+                <NumberField label="Price" source="item_price"/>
                 <ImageField label="Image" source="image_url"/>
-                <BooleanField valueLabelTrue="Active" valueLabelFalse="InActive" source="active"/>
-                <NumberField label="Stock" source="unit_in_stock"/>
+                <NumberField label="Stock" source="item_quantity"/>
                 <TextField source="category_id"/>
-                <EditButton basePath='/product'/>
-                <DeleteButton basePath='/product'/>
+                <TextField source="pharmacy_id"/>
+                <EditButton basePath='/items'/>
+                <DeleteButton basePath='/items'/>
             </Datagrid>
         </List>
     )

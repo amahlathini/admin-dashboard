@@ -12,8 +12,8 @@ import {
   FirebaseAuthProvider
 } from 'react-admin-firebase';
 
-
-import jsonHalRestProvider from 'ra-data-json-hal';
+import simpleRestProvider from 'ra-data-simple-rest';
+//import * as dataProv from 'ra-data-springboot-rest';
 
 import CatalogueProductList from "./components/Catalogue/CatalogueProductList";
 import ProductCreate from "./components/Catalogue/ProductCreate"
@@ -67,14 +67,14 @@ const fetchJson = (url, options = {}) => {
 
 function App() {
   return (
-    <Admin authProvider={authProvider} dashboard={Dashboard} title="ePharmacy Delivery System - Admin Panel" dataProvider={jsonHalRestProvider("https://epharmacy-online.herokuapp.com/api", fetchJson)}>
+    <Admin authProvider={authProvider} dashboard={Dashboard} title="ePharmacy Delivery System - Admin Panel" dataProvider={simpleRestProvider("https://epharmacy-sa.herokuapp.com/", fetchJson)}>
     <Resource name="products" icon={ProductIcon} list={CatalogueProductList} create={ProductCreate} edit={ProductEdit}/>
-    <Resource name="product-category" icon={CategoryIcon} options={{ label: 'Categories' }}  list={CategoryList} create={CategoryCreate} edit={CategoryEdit}/>
-    <Resource name="Drivers" icon={DriverIcon} list={DriverList} create={DriverCreate} edit={DriverEdit}/>
-    <Resource name="Orders" icon={OrderIcon} list={OrderList} create={OrderCreate} edit={OrderEdit}/>
-    <Resource name="Transactions" icon={PaymentIcon} list={PaymentList} edit={PaymentEdit}/>
-    <Resource name="Pharmacies" icon={PharmacyIcon} list={PharmacyList} create={PharmacyCreate} edit={PharmacyEdit}/>
-    <Resource name="Users" icon={UserIcon} list={UserList} create={UserCreate} edit={UserEdit}/>
+    <Resource name="categories" icon={CategoryIcon} options={{ label: 'Categories' }}  list={CategoryList} create={CategoryCreate} edit={CategoryEdit}/>
+    <Resource name="drivers" icon={DriverIcon} list={DriverList} create={DriverCreate} edit={DriverEdit}/>
+    <Resource name="orders" icon={OrderIcon} list={OrderList} create={OrderCreate} edit={OrderEdit}/>
+    <Resource name="payments" icon={PaymentIcon} list={PaymentList} edit={PaymentEdit}/>
+    <Resource name="pharmacies" icon={PharmacyIcon} list={PharmacyList} create={PharmacyCreate} edit={PharmacyEdit}/>
+    <Resource name="users" icon={UserIcon} list={UserList} create={UserCreate} edit={UserEdit}/>
     
     </Admin>
 

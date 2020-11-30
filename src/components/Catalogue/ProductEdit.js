@@ -2,8 +2,6 @@ import React from "react";
 import {
   SimpleForm,
   NumberInput,
-  BooleanInput,
-  DateInput,
   ImageInput,
   Edit,
   TextInput,
@@ -13,21 +11,14 @@ const ProductEdit = (props) => {
   return (
     <Edit title="Edit Product" {...props}>
       <SimpleForm>
-        <TextInput disabled source="id" />
-        <TextInput label="SKU" source="sku" />
-        <TextInput source="name" />
-        <TextInput body source="description" />
-        <NumberInput source="unit_price" />
-        <ImageInput source="image_url" />
-        <BooleanInput
-          valueLabelTrue="Active"
-          valueLabelFalse="InActive"
-          source="active"
-        />
-        <NumberInput source="unit_in_stock" />
-        <DateInput source="date_created" />
-        <DateInput source="last_updated" />
-        <TextInput source="category_id" />
+      <TextInput source="id"/>
+      <TextInput source="item_name"/>
+      <TextInput body source="item_description"/> 
+      <NumberInput label="Price" source="item_price"/>
+      <ImageInput label="Image" source="image_url"/>
+      <NumberInput label="Stock" source="item_quantity"/>
+      <TextInput source="category_id"/>
+      <TextInput source="pharmacy_id"/>
       </SimpleForm>
     </Edit>
   );

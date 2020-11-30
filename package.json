@@ -1,7 +1,7 @@
 {
   "homepage": "https://amahlathini.github.io/admin-dashboard",
   "name": "admin-dashboard",
-  "proxy": "https://epharmacy-online.herokuapp.com",
+  "proxy": "https://epharmacy-sa.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
