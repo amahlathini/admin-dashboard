@@ -18,8 +18,8 @@ const UserList = (props) => {
             <EmailField body source="email"/>
             <NumberField source="primary_number"/>
             <TextField source="area_name" />
-        <EditButton basePath="/users" />
-        <DeleteButton basePath="/users" />
+        <EditButton basePath="users" />
+        <DeleteButton basePath="users" />
       </Datagrid>
     </List>
   );
