@@ -6,11 +6,10 @@ const PharmacyEdit = (props) => {
         <Edit title='Edit Pharmacy' {...props}>
         <SimpleForm>
         <TextInput source="pharmacy_name"/>
-            <TextInput  source="pharmacy_id"/>
-            <NumberInput source="account_number"/>
-            <TextInput source="bank_name" />
-            <NumberInput source="beneficiary_reference"/>
-            <NumberInput source="branch_code"/>
+            <NumberInput source="bank_account.account_number" label="Account Number"/>
+            <TextInput source="bank_account.bank_name" label="Bank Name" />
+            <NumberInput source="bank_account.beneficiary_reference" label="Beneficiary Reference"/>
+            <NumberInput source="bank_account.branch_code" label="Branch Code"/>
         </SimpleForm>
         </Edit>
     )

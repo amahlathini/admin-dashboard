@@ -1,5 +1,5 @@
 import React from 'react'
-import { List, Datagrid, useTranslate, Filter, FilterLiveSearch, TextField, EditButton, NumberField, DeleteButton, ImageField, BooleanField } from "react-admin";
+import { ReferenceField, List, Datagrid, useTranslate, Filter, FilterLiveSearch, TextField, EditButton, NumberField, DeleteButton, ImageField, BooleanField } from "react-admin";
 import { makeStyles, Chip } from '@material-ui/core';
 
 const useQuickFilterStyles = makeStyles(theme => ({
@@ -33,8 +33,12 @@ const CatalogueProductList = (props) => {
                 <NumberField label="Price" source="item_price"/>
                 <ImageField label="Image" source="image_url"/>
                 <NumberField label="Stock" source="item_quantity"/>
-                <TextField source="category_id"/>
-                <TextField source="pharmacy_id"/>
+                <ReferenceField label="Category" source="category_id" reference="categories" link="show">
+                <TextField source="category_name" />
+                </ReferenceField>
+                <ReferenceField label="Pharmacy" source="pharmacy_id" reference="pharmacies" link="show">
+                <TextField source="pharmacy_name" />
+                </ReferenceField>
                 <EditButton basePath='/items'/>
                 <DeleteButton basePath='/items'/>
             </Datagrid>

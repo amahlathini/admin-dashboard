@@ -6,7 +6,7 @@ import {
   EditButton,
   EmailField,
   NumberField,
-  DeleteButton,
+  DeleteButton
 } from "react-admin";
 
 const UserList = (props) => {
@@ -16,8 +16,15 @@ const UserList = (props) => {
       <TextField source="user_name"/>
             <TextField source="user_surname"/>
             <EmailField body source="email"/>
-            <NumberField source="contact.primary_number"/>
-            <TextField source="address.area_name" />
+            <TextField source="gender" label="Gender"/>
+            <NumberField source="contact.primary_number" label="Primary #"/>
+            <NumberField source="contact.secondary_number" label="Secondary #"/>
+            <TextField source="address.street_name" label="Street Name"/>
+            <TextField source="address.area_name" label="Area Name"/>
+            <TextField source="medical_aid.medical_aid_name" label="Medical Aid Name"/>
+            <TextField source="medical_aid.medical_aid_scheme" label="Medical Aid Scheme"/>
+            <TextField source="medical_aid.user_medical_aid_number" label="Medical Aid Number"/>
+            <NumberField source="address.area_code" label="Area Code"/>
         <EditButton basePath="users" />
         <DeleteButton basePath="users" />
       </Datagrid>
