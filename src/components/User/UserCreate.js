@@ -8,8 +8,8 @@ const ProductCreate = (props) => {
             <TextInput source="user_name"/>
             <TextInput source="user_surname"/>
             <TextInput body source="email"/>
-            <NumberInput source="primary_number"/>
-            <TextInput source="area_name" />
+            <NumberInput source="contact.primary_number"/>
+            <TextInput source="address.area_name" />
         </SimpleForm>
         </Create>
     )

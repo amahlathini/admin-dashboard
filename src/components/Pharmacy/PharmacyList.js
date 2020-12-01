@@ -14,10 +14,10 @@ const PharmacyList = (props) => {
       <Datagrid>
       <TextField source="pharmacy_name"/>
             <TextField  source="pharmacy_id"/>
-            <NumberField source="account_number"/>
-            <TextField source="bank_name" />
-            <NumberField source="beneficiary_reference"/>
-            <NumberField source="branch_code"/>
+            <NumberField source="bank_account.account_number" label="Account Number"/>
+            <TextField source="bank_account.bank_name" label="Bank Name" />
+            <NumberField source="bank_account.beneficiary_reference" label="Beneficiary Reference"/>
+            <NumberField source="bank_account.branch_code" label="Branch Code"/>
         <EditButton basePath="/pharmacies" />
         <DeleteButton basePath="/pharmacies" />
       </Datagrid>

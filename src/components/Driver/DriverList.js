@@ -14,10 +14,10 @@ const DriverList = (props) => {
       <Datagrid>
       <TextField source="driver_name"/>
             <TextField source="driver_surname"/>
-            <TextField body source="car_colour"/>
-            <TextField source="car_registration" />
-            <TextField label='Car Name' source="car_name" />
-            <TextField label='Model' source="car_model" />
+            <TextField body source="car.car_colour"/>
+            <TextField source="car.car_registration" />
+            <TextField label='Car Name' source="car.car_name" />
+            <TextField label='Model' source="car.car_model" />
             <NumberField source="latitude"/>
             <NumberField source="longitude"/>
         <EditButton basePath="/drivers" />
