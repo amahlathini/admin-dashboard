@@ -11,8 +11,8 @@ const DriverEdit = (props) => {
             <TextInput source="car.car_registration" label='Registration #'/>
             <TextInput label='Car Name' source="car.car_name" />
             <TextInput label='Model' source="car.car_model" />
-            <NumberInput source="driver_location.latitude"/>
-            <NumberInput source="driver_location.longitude"/>
+            <NumberInput source="driver_location.latitude" label='Latitude'/>
+            <NumberInput source="driver_location.longitude" label='Longitude'/>
         </SimpleForm>
         </Edit>
     )

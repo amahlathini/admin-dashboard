@@ -18,8 +18,8 @@ const DriverList = (props) => {
             <TextField source="car.car_registration" label='Registration #'/>
             <TextField label='Car Name' source="car.car_name" />
             <TextField label='Model' source="car.car_model" />
-            <NumberField source="driver_location.latitude"/>
-            <NumberField source="driver_location.longitude"/>
+            <NumberField source="driver_location.latitude" label='Latitude'/>
+            <NumberField source="driver_location.longitude" label='Longitude'/>
         <EditButton basePath="/drivers" />
         <DeleteButton basePath="/drivers" />
       </Datagrid>

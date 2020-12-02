@@ -5,13 +5,13 @@ const OrderEdit = (props) => {
     return (
         <Edit title='Edit Order' {...props}>
         <SimpleForm>
-        <TextInput source="user_user_id"/>
-            <TextInput source="order_number"/>
-            <TextInput source="payment_type"/>
-            <NumberInput source="order_total" />
-            <TextInput source="order_status"/>
-            <NumberInput source="total_catalogue_items"/>
-            <DateInput source="date"/>
+        <TextInput source="user_id" label="USER"/>
+        <TextInput disable source="id" label="Order #"/>
+            <TextInput source="payment_type" label="Payment Type"/>
+            <NumberInput source="order_total" label="Total"/>
+            <TextInput source="order_status" label="Status"/>
+            <NumberInput source="total_catalogue_items" label="Quantity"/>
+            <DateInput source="date" label="Date"/>
         </SimpleForm>
         </Edit>
     )

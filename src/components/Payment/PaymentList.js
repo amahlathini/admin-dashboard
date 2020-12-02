@@ -5,11 +5,10 @@ const PaymentList = (props) => {
     return (
         <List {...props}>
             <Datagrid>
-            <TextField disable source="receipt_number" />
-        <TextField source="date" />
+            <TextField disable source="id" />
         <TextField source="type_of_payment" />
-        <TextField source="pharmacy_pharmacy_id" />
-        <TextField source="user_user_id" />
+        <TextField source="pharmacy_id" />
+        <TextField source="user_id" />
         <NumberField disable source="payment_status" />
         <NumberField disable source="payment_total" />
         <DateField source="date" />

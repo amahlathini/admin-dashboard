@@ -5,11 +5,10 @@ const PaymentEdit = (props) => {
   return (
     <Edit title="Edit Payment" {...props}>
       <SimpleForm>
-        <TextInput disable source="receipt_number" />
-        <TextInput source="date" />
+        <TextInput disable source="id" />
         <TextInput source="type_of_payment" />
-        <TextInput source="pharmacy_pharmacy_id" />
-        <TextInput source="user_user_id" />
+        <TextInput source="pharmacy_id" />
+        <TextInput source="user_id" />
         <NumberInput disable source="payment_status" />
         <NumberInput disable source="payment_total" />
         <DateInput source="date" />
